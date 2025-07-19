@@ -32,6 +32,8 @@ public static int printSecondLargest(int arr[])
     }
     return prev;
 }
+
+
     public static void main(String[] args){
         int[] arr = {2,3,4,6,8,9,10};
         System.out.println("second largest element is: "+printSecondLargest(arr));

@@ -19,6 +19,7 @@ public class CalculateGCD {
 
 
     // solving through euclid approach
+
     public static int gcd(int a, int b){
         while(b!=0){
             int temp = b;

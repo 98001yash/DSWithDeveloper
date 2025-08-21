@@ -47,9 +47,18 @@ public class Tree_01 {
          return left * right;
      }
      return root.val* left * right;
+    }
 
+    public static int findMax(Node root){
+        if(root ==null) return Integer.MIN_VALUE;
+        int x = findMax(root.left);
+        int y = findMax(root.right);
+        int z = Math.max(x,y);
+        return Math.max(root.val, z);
 
     }
+
+
 
 
     public static void main(String[] args){
@@ -70,5 +79,6 @@ public class Tree_01 {
 
         System.out.println(product(a));
         System.out.println(productNoZero(a));
+        System.out.println(findMax(a));
     }
 }

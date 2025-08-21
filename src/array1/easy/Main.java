@@ -105,26 +105,64 @@
 
 //   left rotate the array by one
 
-package array1.easy;
-public class Main {
-    public static void rotateArrayByOne(int[] nums) {
-        int n = nums.length;
-        int first = nums[0];
+//package array1.easy;
+//public class Main {
+//    public static void rotateArrayByOne(int[] nums) {
+//        int n = nums.length;
+//        int first = nums[0];
+//
+//        for (int i = 0; i < n - 1; i++) {
+//            nums[i] = nums[i + 1];
+//        }
+//
+//        nums[n - 1] = first;
+//
+//        for (int num : nums) {
+//            System.out.print(num + " ");
+//        }
+//        System.out.println();
+//    }
+//
+//    public static void main(String[] args) {
+//        int[] arr = {1, 2, 3, 4, 5};
+//        rotateArrayByOne(arr);  // Output: 2 3 4 5 1
+//    }
+//}
 
-        for (int i = 0; i < n - 1; i++) {
-            nums[i] = nums[i + 1];
-        }
 
-        nums[n - 1] = first;
-
-        for (int num : nums) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-    }
-
-    public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 4, 5};
-        rotateArrayByOne(arr);  // Output: 2 3 4 5 1
-    }
-}
+//package array1.easy;
+//import java.util.HashMap;
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.println("Yash chauhan....UID is 23bcs80339");
+//
+//        System.out.print("Enter the size of the array: ");
+//        int n = sc.nextInt();
+//
+//        int[] arr = new int[n];
+//
+//        System.out.println("Enter the elements of the array:");
+//        for (int i = 0; i < n; i++) {
+//            arr[i] = sc.nextInt();
+//        }
+//
+//        HashMap<Integer, Integer> frequencyMap = new HashMap<>();
+//
+//
+//        for (int num : arr) {
+//            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+//        }
+//
+//
+//        System.out.println("\nElement frequencies:");
+//        for (Integer key : frequencyMap.keySet()) {
+//            System.out.println(key + " -> " + frequencyMap.get(key));
+//        }
+//
+//        sc.close();
+//    }
+//}

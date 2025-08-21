@@ -6,7 +6,7 @@ public class Remove_duplicates_from_sorted_array {
         if(nums.length==0) return 0;
 
         int i =0;
-        for(int j=01;i<nums.length;j++){
+        for(int j=1;i<nums.length;j++){
             if(nums[i]!=nums[j]) i++;
             nums[i] = nums[j];
         }

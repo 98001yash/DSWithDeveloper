@@ -32,6 +32,39 @@ public class Traversal {
         postorder(root.right);
         System.out.print(root.val+" ");
     }
+
+
+    // to create the mirror image of the tree
+    public static void revert(Node root){
+        if(root == null) return;
+        Node temp =root.left;
+        root.left = root.right;
+        root.right = temp;
+        revert(root.left);
+        revert(root.right);
+    }
+
+
+    //leetcode 100
+    public static boolean isSameTree(Node p, Node q){
+
+        if(p==null && q==null) return true;
+        if(p==null && q!=null) return false;
+        if(p!=null && q==null) return false;
+
+        if(p.val!= q.val)  return false;
+        if(!isSameTree(p.left, q.left)) return false;
+        if(!isSameTree(p.right, q.right)) return false;
+        return false;
+    }
+
+
+    // symmetric tree
+    public static boolean isSymmetric(Node root){
+        if(root == null) return true;
+        revert(root.right);
+        return isSameTree(root.left, root.right);
+    }
     public static void main(String[] args){
 
         Node a = new Node(1);

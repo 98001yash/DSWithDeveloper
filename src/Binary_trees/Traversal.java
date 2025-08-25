@@ -65,6 +65,8 @@ public class Traversal {
         revert(root.right);
         return isSameTree(root.left, root.right);
     }
+
+    // diamter of the binary tree
     public static void main(String[] args){
 
         Node a = new Node(1);

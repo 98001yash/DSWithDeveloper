@@ -26,3 +26,29 @@ package Binary_trees;
 //    }
 //}'
 
+import java.util.ArrayList;
+import java.util.List;
+
+//  Binary tree Paths
+public class tree_02 {
+
+    public static void path(Node root, String s, List<String> ans){
+        if(root.left == null && root.right == null){
+            s += root.val;
+            ans.add(s);
+            return;
+
+        }
+        path(root.left, s+root.val+"->", ans);
+        path(root.right, s+root.val+"->", ans);
+    }
+
+    public static List<String> binaryTreePaths(Node root){
+        List<String> ans = new ArrayList<>();
+        path(root,"",ans);
+        return ans;
+    }
+    public static void main(String[] args){
+
+    }
+}

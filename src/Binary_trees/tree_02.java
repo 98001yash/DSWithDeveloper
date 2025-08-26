@@ -48,6 +48,15 @@ public class tree_02 {
         path(root,"",ans);
         return ans;
     }
+
+    // Path sum leet code 113
+    public static boolean hasPathSum(Node root, int targetSum){
+        if(root == null) return false;
+        if(root!=null && root.left==null && root.right!=null){
+            if(root.val == targetSum) return true;
+        }
+        return hasPathSum(root.left , targetSum - root.val) || hasPathSum(root.right, targetSum=root.val);
+    }
     public static void main(String[] args){
 
     }

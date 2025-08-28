@@ -166,3 +166,145 @@
 //        sc.close();
 //    }
 //}
+
+
+package array1.easy;
+class Node  {
+    int data;
+    Node next;
+    Node prev;
+    Node(int data){
+        this.data = data;
+    }
+}
+class SLL {
+    Node head;
+    Node tail;
+    int size;
+
+    void insertAtEnd(int val) {
+        Node temp = new Node(val);
+        if (head == null) {
+            head = temp;
+            tail = temp;
+        } else {
+            tail.next = temp;
+            tail = temp;
+        }
+    }
+
+    void print() {
+        Node temp = head;
+        while (temp != null) {
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+    }
+
+    int size() {
+        Node temp = head;
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
+    void insertAtHead(int data) {
+        Node temp = new Node(data);
+        if (head == null) {
+            head = temp;
+            tail = temp;
+        } else {
+            temp.next = head;
+            head = temp;
+        }
+    }
+
+    void insert(int idx, int val) {
+        Node temp = new Node(val);
+        if (idx == 0) {
+            insertAtHead(val);
+        }
+        if (idx == size()) {
+            insertAtEnd(val);
+        }
+        if (idx > size()) {
+            System.out.println("invalid index");
+            return;
+        }
+        Node x = head;
+        for (int i = 1; i <= idx - 1; i++) {
+            x = x.next;
+        }
+        temp.next = x.next;
+        x.next = temp;
+    }
+
+    int get(int idx) {
+        if (idx == size() - 1) return tail.data;
+        if (idx >= size() || idx < 0) {
+            System.out.println("invalid index!!");
+            return -1;
+        }
+        Node temp = head;
+        for (int i = 1; i <= idx; i++) {
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+    void deleteAtHead() {
+        if(head==null){
+            System.out.println("list is empty");
+        }
+        head = head.next;
+        size--;
+    }
+    void delete(int idx){
+        if(head==null){
+            System.out.println("list is empty");
+        }
+        if(idx<0||idx>=size){
+            System.out.println("invalid index");
+        }
+        Node temp = head;
+        for(int i=1;i<=idx-1;i++){
+            temp = temp.next;
+        }
+        temp.next = temp.next.next;
+        size--;
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+
+        System.out.println("Yash chauhan.....23bcs80339");
+SLL list = new SLL();
+list.insertAtEnd(12);
+        list.insertAtEnd(32);
+        list.insertAtEnd(11);
+        list.insertAtEnd(9);
+    list.print();
+    list.insertAtHead(1);
+        list.insertAtHead(98);
+        list.insertAtHead(90);
+        System.out.println();
+        list.print();
+        System.out.println();
+        list.insert(2,100);
+        list.insert(4,120);
+        System.out.println();
+        System.out.println(list.get(2));
+        list.print();
+        System.out.println();
+    System.out.println(list.size());
+        System.out.println();
+        list.deleteAtHead();
+        System.out.println();
+        list.delete(4);
+
+        list.print();
+    }
+}
+

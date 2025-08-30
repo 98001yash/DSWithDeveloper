@@ -59,3 +59,4 @@ public class Main1 {
         int n = arr.length;
     }
 }
+// created and performed the basic operation in the array

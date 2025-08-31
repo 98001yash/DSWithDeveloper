@@ -9,6 +9,17 @@ class Person {   // super class/ parent class
 class Student1 extends Person{
     // derived class. child class
 
+    /*
+    Constructor is the method which has got the same as that of the className
+    while creating the constructor, we should not keep the return type for the method
+    Constructor get called automatically at the time of the creation of the object
+    Since constructor get called automatically at the time of the object creation , we use this constructor to initialize
+    the instance variable of the class.
+
+    types
+    1. Zero args constructor
+    2. parametrized constructor
+     */
     Student1(String name, String address, int age, int marks,String grade){
         System.out.println("constructor called during object creation...! ");
         this.name = name;

@@ -8,15 +8,24 @@ class Account {
 
     // method: public
     public double getBalance(double balance){
-        // withdrawing thr money
-        return 0.0f;
+        // preform authentication
+        boolean result =   validate("sachin", "sachin123");
 
+        // withdrawing thr money
+        if(result == true){
+            this.balance = this.balance - balance;
+            return balance;
+
+        }else {
+            // throw a meaningful exception/ message
+            System.out.println("invalid username/password... try again....");
+            return 0.0;
+        }
     }
     // method:public
     public void setBalance(double balance){
         // preform authentication
       boolean result =   validate("sachin", "sachin123");
-
         // depositing the money
         if(result == true){
             // deposit the money
@@ -39,5 +48,7 @@ public class TestApp {
 
         Account acc = new Account();
        acc.setBalance(1000.0);
+      double balance =  acc.getBalance(500.0);
+        System.out.println("withdrawing the balance " + balance);
     }
 }

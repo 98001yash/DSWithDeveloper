@@ -14,7 +14,7 @@ class Student3{
         this.age = age;
     }
 
-    // instance methof
+    // instance method
     public void display(){
         System.out.println("Name is: "+name);
         System.out.println("Age is: "+age);

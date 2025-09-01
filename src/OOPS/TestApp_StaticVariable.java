@@ -18,7 +18,7 @@ public class TestApp_StaticVariable {
   => Static variables
     => Memory will be given inside the Method-Area
     => memory will given at the time of the loading .class
-    -> Default value will be given if user wont specify any value
+    -> Default value will be given if user won't specify any value
     memory will be taken out the time of the unloading of the .class file
 
     Static variable can be access in two ways

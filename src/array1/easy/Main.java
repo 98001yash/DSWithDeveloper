@@ -279,14 +279,14 @@ class SLL {
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Yash chauhan.....23bcs80339");
+        System.out.println("Priyanshu raj.....23bcs10102");
 SLL list = new SLL();
-list.insertAtEnd(12);
-        list.insertAtEnd(32);
-        list.insertAtEnd(11);
-        list.insertAtEnd(9);
+list.insertAtEnd(1);
+        list.insertAtEnd(2);
+        list.insertAtEnd(3);
+        list.insertAtEnd(4);
     list.print();
-    list.insertAtHead(1);
+    list.insertAtHead(11);
         list.insertAtHead(98);
         list.insertAtHead(90);
         System.out.println();

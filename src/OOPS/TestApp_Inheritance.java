@@ -1,6 +1,7 @@
 package OOPS;
 
-class Person {   // super class/ parent class
+class
+Person {   // super class/ parent class
     public String name;
     public String address;
     public int age;

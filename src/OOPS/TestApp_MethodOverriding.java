@@ -46,4 +46,7 @@ public class TestApp_MethodOverriding {
   During  the inheritance , the parent class method implementation would not match the need of the child class so
   child class take the method name but it will change the implementation as oer the need of the
   child class.. this mechanism is called as "method Overriding"
+
+  => in case of overriding, JVM will bind the method calls based on the runtime object, but on thr reference
+  type so, we say overriding has "truePolymorphism/ LateBinding/RuntimeBinding"
  */
